@@ -245,6 +245,16 @@ items <- c(
 showAreaAndBarPlots(data, items, scales = "fixed")
 ```
 
+## PE per capita (by sector, time domain, line graph)
+
+```{r PE per capita line plot}
+dIea <- data %>%
+#  # To make the plots less crowded, show only IEA historical data.
+#  filter(scenario != "historical" | model == "IEA")
+showMultiLinePlots(dIea, "PE pCap")
+items <- c()
+showMultiLinePlots(dIea, items, scales = "fixed")
+```
 
 ## CO2 Prices
 
